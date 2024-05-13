@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thay đổi nội dung</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="content">
+  <input placeholder="điền nội dung cần thay đổi ">
+</div>
+
+<button id="changeContentBtn">Thay đổi</button>
+
+<script src="script.js"></script>
+<script>$(document).ready(function() {
+    $('#changeContentBtn').click(function() {
+      $('#content').text('đổi làm cái đéo gì '); // Thay đổi nội dung của div có id="content" từ A sang B
+    });
+  });
+  </script>
+</body>
+</html>

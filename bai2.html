@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thêm mới Item</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <h1>LIST ITEMS </h1>
+    <li>iphone 11</li>
+    <li>iphone 12</li>
+    <li>iphone 13 </li>
+</div>
+<input type="text" id="newItemInput">
+<button id="addItemBtn">Add</button>
+
+<ul id="itemList">
+  <!-- Danh sách item sẽ được thêm vào đây -->
+</ul>
+
+<script src="script.js"></script>
+<script>$(document).ready(function() {
+    $('#addItemBtn').click(function() {
+      var newItemValue = $('#newItemInput').val().trim(); // Lấy giá trị từ input và loại bỏ khoảng trắng ở đầu và cuối
+      if (newItemValue !== '') { // Kiểm tra xem input có khác rỗng không
+        var newItem = '<li>' + newItemValue + '</li>'; // Tạo thẻ <li> chứa giá trị mới
+        $('#itemList').append(newItem); // Thêm mới item vào danh sách
+        $('#newItemInput').val(''); // Xóa trắng input
+      }
+    });
+  });
+  </script>
+</body>
+</html>
+
+  
